@@ -1,0 +1,1165 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Sampling/">
+      
+      
+        <link rel="next" href="../Sharing/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.38">
+    
+    
+      
+        <title>Configuration - TabbyAPI</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.8c3ca2c6.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#configuration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="TabbyAPI" class="md-header__button md-logo" aria-label="TabbyAPI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            TabbyAPI
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Configuration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Welcome to TabbyAPI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../10.-Tool-Calling/" class="md-tabs__link">
+        
+  
+    
+  
+  Tool Calling in TabbyAPI
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../AI-Horde/" class="md-tabs__link">
+        
+  
+    
+  
+  Kobold AI Horde
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Chat-Completions/" class="md-tabs__link">
+        
+  
+    
+  
+  Templates
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Community-Projects/" class="md-tabs__link">
+        
+  
+    
+  
+  Community Projects
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../FAQ/" class="md-tabs__link">
+        
+  
+    
+  
+  FAQ
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Getting-Started/" class="md-tabs__link">
+        
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Sampling/" class="md-tabs__link">
+        
+  
+    
+  
+  Samplers
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Configuration
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Sharing/" class="md-tabs__link">
+        
+  
+    
+  
+  Remote Access
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Usage/" class="md-tabs__link">
+        
+  
+    
+  
+  Usage
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="TabbyAPI" class="md-nav__button md-logo" aria-label="TabbyAPI" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    TabbyAPI
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to TabbyAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10.-Tool-Calling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tool Calling in TabbyAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI-Horde/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kobold AI Horde
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Chat-Completions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Templates
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Community-Projects/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community Projects
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FAQ/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    FAQ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Getting-Started/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting Started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sampling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Samplers
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Configuration
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#networking-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Networking Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sampling-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Developer Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#draft-model-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Draft Model Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lora-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lora Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#embeddings-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Embeddings Options
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Sharing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Remote Access
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="configuration">Configuration</h1>
+<p>TabbyAPI primarily uses a config.yml file to adjust various options. This is the preferred way and has the ability to adjust all options of TabbyAPI.</p>
+<p>CLI arguments are also included, but those serve to <em>override</em> the options set in config.yml. Therefore, they act a bit differently compared to other programs, especially with booleans.
+Example: A user sets <code>gpu_split_auto</code> to True. The CLI arg will then be <code>--gpu_split-auto False</code> to override that previous config.yml setting.</p>
+<p>In addition, some config.yml options are too complex to represent as command args, so those are not included with the argparser.</p>
+<p>All of these options have descriptive comments above them. You should not need to reference this documentation page unless absolutely necessary.</p>
+<h3 id="networking-options">Networking Options</h3>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td>String (127.0.0.1)</td>
+<td>Set the IP address used for hosting TabbyAPI</td>
+</tr>
+<tr>
+<td>port</td>
+<td>Int (5000)</td>
+<td>Set the TCP Port use for TabbyAPI</td>
+</tr>
+<tr>
+<td>disable_auth</td>
+<td>Bool (False)</td>
+<td>Disables API authentication</td>
+</tr>
+<tr>
+<td>send_tracebacks</td>
+<td>Bool (False)</td>
+<td>Send server tracebacks to client.<br><br>Note: It's not recommended to enable this if sharing the instance with others.</td>
+</tr>
+<tr>
+<td>api_servers</td>
+<td>List[String] (["OAI"])</td>
+<td>API servers to enable. Possible values <code>"OAI", "Kobold"</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="logging-options">Logging Options</h3>
+<p>Note: With CLI args, all logging parameters are prefixed by <code>log-</code>. For example, <code>prompt</code> will be <code>--log-prompt true/false</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>prompt</td>
+<td>Bool (False)</td>
+<td>Logs prompts to the console</td>
+</tr>
+<tr>
+<td>generation_params</td>
+<td>Bool (False)</td>
+<td>Logs request generation options to the console</td>
+</tr>
+<tr>
+<td>requests</td>
+<td>Bool (False)</td>
+<td>Logs a request's URL, Body, and Headers to the console</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sampling-options">Sampling Options</h3>
+<p>Note: This block is for sampling overrides, not samplers themselves.</p>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>override_preset</td>
+<td>String (None)</td>
+<td>Startup the given sampler override preset in the sampler_overrides folder</td>
+</tr>
+</tbody>
+</table>
+<h3 id="developer-options">Developer Options</h3>
+<p>Note: These are experimental flags that may be removed at any point.</p>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>unsafe_launch</td>
+<td>Bool (False)</td>
+<td>Skips dependency checks on startup. Only recommended for debugging.</td>
+</tr>
+<tr>
+<td>disable_request_streaming</td>
+<td>Bool (False)</td>
+<td>Forcefully disables streaming requests</td>
+</tr>
+<tr>
+<td>cuda_malloc_backend</td>
+<td>Bool (False)</td>
+<td>Uses pytorch's CUDA malloc backend to load models. Helps save VRAM.<br><br>Safe to enable.</td>
+</tr>
+<tr>
+<td>uvloop</td>
+<td>Bool (False)</td>
+<td>Use a faster asyncio event loop. Can increase performance.<br><br>Safe to enable.</td>
+</tr>
+<tr>
+<td>realtime_process_priority</td>
+<td>Bool (False)</td>
+<td>Set the process priority to "Realtime". Administrator/sudo access required, otherwise the priority is set to the highest it can go in userland.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="model-options">Model Options</h3>
+<p>Note: Most of the options here will only apply on initial model load/startup (ephemeral). They will not persist unless you add the option name to <code>use_as_default</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>model_dir</td>
+<td>String ("models")</td>
+<td>Directory to look for models.<br><br>Note: Persisted across subsequent load requests</td>
+</tr>
+<tr>
+<td>use_dummy_models</td>
+<td>Bool (False)</td>
+<td>Send a dummy OAI model card when calling the <code>/v1/models</code> endpoint. Used for clients which enforce specific OAI models.<br><br>Note: Persisted across subsequent load requests</td>
+</tr>
+<tr>
+<td>model_name</td>
+<td>String (None)</td>
+<td>Folder name of a model to load. The below parameters will not apply unless this is filled out.</td>
+</tr>
+<tr>
+<td>use_as_default</td>
+<td>List[String] ([])</td>
+<td>Keys to use by default when loading models. For example, putting <code>cache_mode</code> in this array will make every model load with that value unless specified by the API request.<br><br>Note: Also applies to the <code>draft</code> sub-block</td>
+</tr>
+<tr>
+<td>max_seq_len</td>
+<td>Float (None)</td>
+<td>Maximum sequence length of the model. Uses the value from config.json if not specified here.</td>
+</tr>
+<tr>
+<td>override_base_seq_len</td>
+<td>Float (None)</td>
+<td>Overrides the base sequence length of a model. You probably don't want to use this. max_seq_len is better.<br><br>Note: This is only required for automatic RoPE alpha calculation AND if the model has an incorrect base sequence length (ex. Mistral 7b)</td>
+</tr>
+<tr>
+<td>tensor_parallel</td>
+<td>Bool (False)</td>
+<td>Use tensor parallelism to load the model. This ignores the value of gpu_split_auto.</td>
+</tr>
+<tr>
+<td>gpu_split_auto</td>
+<td>Bool (True)</td>
+<td>Automatically split the model across multiple GPUs. Manual GPU split isn't used if this is enabled.</td>
+</tr>
+<tr>
+<td>autosplit_reserve</td>
+<td>List[Int] ([96])</td>
+<td>Amount of empty VRAM to reserve when loading with autosplit.<br><br>Represented as an array of MB per GPU used.</td>
+</tr>
+<tr>
+<td>gpu_split</td>
+<td>List[Float] ([])</td>
+<td>Float array of GBs to split a model between GPUs.</td>
+</tr>
+<tr>
+<td>rope_scale</td>
+<td>Float (1.0)</td>
+<td>Adjustment for rope scale (or compress_pos_emb)</td>
+</tr>
+<tr>
+<td>rope_alpha</td>
+<td>Float (None)</td>
+<td>Adjustment for rope alpha. Leave blank to automatically calculate based on the max_seq_len.</td>
+</tr>
+<tr>
+<td>cache_mode</td>
+<td>String ("FP16")</td>
+<td>Cache mode for the model.<br><br>Options: FP16, Q8, Q6, Q4</td>
+</tr>
+<tr>
+<td>cache_size</td>
+<td>Int (max_seq_len)</td>
+<td><br>Note: If using CFG, the cache size should be 2 * max_seq_len.</td>
+</tr>
+<tr>
+<td>chunk_size</td>
+<td>Int (2048)</td>
+<td>Amount of tokens per chunk with ingestion. A lower value reduces VRAM usage at the cost of ingestion speed.</td>
+</tr>
+<tr>
+<td>max_batch_size</td>
+<td>Int (None)</td>
+<td>The absolute maximum amount of prompts to process at one time. This value is automatically adjusted based on cache size.</td>
+</tr>
+<tr>
+<td>prompt_template</td>
+<td>String (None)</td>
+<td>Name of a jinja2 chat template to apply for this model. Must be located in the <code>templates</code> directory.</td>
+</tr>
+<tr>
+<td>num_experts_per_token</td>
+<td>Int (None)</td>
+<td>Number of experts to use per-token for MoE models. Pulled from the config.json if not specified.</td>
+</tr>
+<tr>
+<td>fasttensors</td>
+<td>Bool (False)</td>
+<td>Possibly increases model loading speeds.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="draft-model-options">Draft Model Options</h3>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>draft_model_dir</td>
+<td>String ("models")</td>
+<td>Directory to look for draft models.<br><br>Note: Persisted across subsequent load requests</td>
+</tr>
+<tr>
+<td>draft_model_name</td>
+<td>String (None)</td>
+<td>String: Folder name of a draft model to load.</td>
+</tr>
+<tr>
+<td>draft_rope_scale</td>
+<td>Float (1.0)</td>
+<td>String: RoPE scale value for the draft model.</td>
+</tr>
+<tr>
+<td>draft_rope_alpha</td>
+<td>Float (1.0)</td>
+<td>RoPE alpha value for the draft model. Leave blank for auto-calculation.</td>
+</tr>
+<tr>
+<td>draft_cache_mode</td>
+<td>String ("FP16")</td>
+<td>Cache mode for the draft model.<br><br>Options: FP16, Q8, Q6, Q4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lora-options">Lora Options</h3>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>lora_dir</td>
+<td>String ("loras")</td>
+<td>Directory to look for loras.<br><br>Note: Persisted across subsequent load requests</td>
+</tr>
+<tr>
+<td>loras</td>
+<td>List[loras] ([])</td>
+<td>List of lora objects to apply to the model. Each object contains a name and scaling.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>String (None)</td>
+<td>Folder name of a lora to load.<br><br>Note: An element of the <code>loras</code> key</td>
+</tr>
+<tr>
+<td>scaling</td>
+<td>Float (1.0)</td>
+<td>"Weight" to apply the lora on the parent model. For example, applying a lora with 0.9 scaling will lower the amount of application on the parent model.<br><br>Note: An element of the <code>loras</code> key</td>
+</tr>
+</tbody>
+</table>
+<h3 id="embeddings-options">Embeddings Options</h3>
+<p>Note: Most of the options here will only apply on initial embedding model load/startup (ephemeral).</p>
+<table>
+<thead>
+<tr>
+<th>Config Option</th>
+<th>Type (Default)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>embedding_model_dir</td>
+<td>String ("models")</td>
+<td>Directory to look for embedding models.<br><br>Note: Persisted across subsequent load requests</td>
+</tr>
+<tr>
+<td>embeddings_device</td>
+<td>String ("cpu")</td>
+<td>Device to load an embedding model on.<br><br>Options: cpu, cuda, auto<br><br>Note: Persisted across subsequent load requests</td>
+</tr>
+<tr>
+<td>embedding_model_name</td>
+<td>String (None)</td>
+<td>Folder name of an embedding model to load using infinity-emb.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d6f25eb3.min.js"></script>
+      
+    
+  </body>
+</html>
